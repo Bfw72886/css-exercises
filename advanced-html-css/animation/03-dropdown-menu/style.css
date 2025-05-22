@@ -17,16 +17,19 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
-  display: none;
 }
 
 ul.dropdown-menu li:hover {
   background: rgb(47, 46, 46);
 }
 
-.visible {
-  display: block;
+.dropdown-menu.visible {
+  transform: scaleY(1);
+  transition: transform 1s cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
-
+.dropdown-menu {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1s ease-in-out;
+}
